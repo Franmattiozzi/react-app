@@ -9,7 +9,7 @@ function App() {
     <>
       <NavBar />
       <ItemDetailContainer />
-      {/* <ItemListContainer /> */}
+      <ItemListContainer />
     </>
   );
 }
