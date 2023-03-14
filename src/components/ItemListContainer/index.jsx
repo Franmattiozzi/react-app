@@ -8,6 +8,9 @@ const products = [
   { id: 1, image: "https://images.fravega.com/f500/2383a189cb371f0c7adf58925113cb17.jpg", title: "Banco plano"},
   { id: 2, image: "https://behumax.com/wp-content/uploads/2022/04/Multigym-400-blanco-2-600x600.jpg", title: "Máquina multifunción" },
   { id: 3, image: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/067/031/products/espalda1-a5369178e469b4aa1315755687545789-640-0.jpg", title: "Máquina dorsalera" },
+  { id: 4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PfhN5Lb5ZaSGv9yyvtxkcG6gc01iWBm6vg&usqp=CAU", title: "Caminadora" },
+  { id: 5, image: "", title: ""},
+
 ];
 
 export const ItemListContainer = () => {

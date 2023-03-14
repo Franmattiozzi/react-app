@@ -1,37 +1,39 @@
 import React from 'react';
 import CartWidget from "../CartWidget";
+import { NavLink } from "react-router-dom";
 
 
 export const NavBar = () => {
   return (
-            <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid">
-            <a className="navbar-brand" href="#"></a>
+    <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg bg-light">
+            <NavLink className="navbar-brand" to="/"></NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    <NavLink className="nav-link" aria-current="page" to="../index.html">Inicio</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" href="colecciones.html">Colecciones</a>
+                    <NavLink className="nav-link active" to="categoria">Colecciones</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="dondeEstamos.html">Sucursales</a>
+                    <NavLink className="nav-link" to="categoria">Sucursales</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="sobreNostros.html">Sobre nosotros</a>
+                    <NavLink className="nav-link" to="categoria">Sobre nosotros</NavLink>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="productos.html">Comprar</a>
+                    <NavLink className="nav-link" to="cart">
+                        <CartWidget />
+                    </NavLink>
                     </li>
                 </ul>
             </div>
-            <CartWidget />
-        </div>
-    </nav>
+        </nav>
+    </div>
   )
 }
 
