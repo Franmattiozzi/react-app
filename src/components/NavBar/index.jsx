@@ -17,13 +17,13 @@ export const NavBar = () => {
                     <NavLink className="nav-link" aria-current="page" to="../index.html">Inicio</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link active" to="categoria">Colecciones</NavLink>
+                    <NavLink className="nav-link active" to="/categoria/products">Colecciones</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to="categoria">Sucursales</NavLink>
+                    <NavLink className="nav-link" to="/categoria/branches">Sucursales</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to="categoria">Sobre nosotros</NavLink>
+                    <NavLink className="nav-link" to="/categoria/about-us">Sobre nosotros</NavLink>
                     </li>
                     <li className="nav-item">
                     <NavLink className="nav-link" to="cart">

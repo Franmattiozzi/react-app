@@ -1,19 +1,29 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from "../ItemDetail";
+import { useParams } from "react-router-dom";
 
-const product = { id: 1, image: "https://images.fravega.com/f500/2383a189cb371f0c7adf58925113cb17.jpg", title: "Banco plano"};
 
+const products = [
+  { id: 1, image: "https://images.fravega.com/f500/2383a189cb371f0c7adf58925113cb17.jpg", category: "products", title: "Banco plano"},
+  { id: 2, image: "https://behumax.com/wp-content/uploads/2022/04/Multigym-400-blanco-2-600x600.jpg", category: "products", title: "Máquina multifunción" },
+  { id: 3, image: "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/067/031/products/espalda1-a5369178e469b4aa1315755687545789-640-0.jpg", category: "products", title: "Máquina dorsalera" },
+  { id: 4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PfhN5Lb5ZaSGv9yyvtxkcG6gc01iWBm6vg&usqp=CAU", category: "products", title: "Caminadora" },
+  { id: 5, image: "", title: ""},
+
+];
 
 const ItemDetailContainer = () => {
   const [data, setData] = useState({});
+  const {detalleId} = useParams();
+
 
   useEffect(() => {
     const getData = new Promise(resolve => {
       setTimeout(() => {
-        resolve(product);
+        resolve(products);
       }, 3000);
     });
-    getData.then(res => setData(res));
+    getData.then(res => setData(res.find(product=>product.id === parseInt(detalleId))));
   }, [])
 
   return (
