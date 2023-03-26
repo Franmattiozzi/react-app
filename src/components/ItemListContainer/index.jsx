@@ -32,14 +32,11 @@ export const ItemListContainer = () => {
     }
   }, [categoriaId])
 
-  const onAdd = (quantity) => {
-    console.log("Compraste ${quantity} unidades");
-  }
+
  
   return (
     <>
         <Title greeting="The Promise Fitness" />
-        <ItemCount initial={1} stock={5} onAdd={onAdd} />
         <ItemList data={data} />
     </>
   );
